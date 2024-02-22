@@ -1,0 +1,12 @@
+@import url('./styles.css');
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 33.33%;
+  gap: 10px;
+}
+
+input[type='number'][name='delay'][required] {
+  width: 97.5%;
+}
