@@ -73,8 +73,22 @@ startBtn.addEventListener('click', () => {
 });
 
 function updateDateTimeFields({ days, hours, minutes, seconds }) {
-  daysField.textContent = `${days}`;
-  hoursField.textContent = `${hours}`;
-  minutesField.textContent = `${minutes}`;
-  secondsField.textContent = `${seconds}`;
+  if (days === '00' && hours === '00' && minutes === '00' && seconds === '00') {
+    daysField.textContent = '00';
+    hoursField.textContent = '00';
+    minutesField.textContent = '00';
+    secondsField.textContent = '00';
+  } else {
+    daysField.textContent = `${days}`;
+    hoursField.textContent = `${hours}`;
+    minutesField.textContent = `${minutes}`;
+    secondsField.textContent = `${seconds}`;
+  }
 }
+
+// function updateDateTimeFields({ days, hours, minutes, seconds }) {
+//   daysField.textContent = `${days}`;
+//   hoursField.textContent = `${hours}`;
+//   minutesField.textContent = `${minutes}`;
+//   secondsField.textContent = `${seconds}`;
+// }
